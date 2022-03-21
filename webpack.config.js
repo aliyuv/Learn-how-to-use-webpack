@@ -26,7 +26,8 @@ module.exports = {
     ignoreOrder: false, // Enable to remove warnings about conflicting order
   }),
 ],
-  module: {    
+
+    module: {    
     rules: [
       {
         test: /\.s[ac]ss$/i,
@@ -68,6 +69,6 @@ module.exports = {
       },
     ],
   },
-};
+  }
 
 

@@ -26,22 +26,48 @@ module.exports = {
     ignoreOrder: false, // Enable to remove warnings about conflicting order
   }),
 ],
-  module: {    
-    rules: [
-      {
-        test: /\.css$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: "../",
-            },
-          },
-          "css-loader",
-        ],
-      },
+module: {    
+  rules: [
+    {
+      test: /\.s[ac]ss$/i,
+      use: [
+      // Creates `style` nodes from JS strings
+      "style-loader",
+      // Translates CSS into CommonJS
+      "css-loader",
+      // Compiles Sass to CSS
+      "sass-loader",
+      "less-loader",
     ],
-  },
+    },
+    {
+      test: /\.less$/i,
+      use: [
+        // compiles Less to CSS
+        "style-loader",
+        "css-loader",
+        "less-loader",
+      ],
+    },
+    {
+      test: /\.styl$/,
+      use: [
+        // compiles Less to CSS
+        "style-loader",
+        "css-loader",
+        "stylus-loader",
+      ],
+    },
+    {
+      test: /\.(png|jpe?g|gif)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+        },
+      ],
+    },
+  ],
+},
 };
 
 
