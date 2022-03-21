@@ -6,6 +6,10 @@ module.exports = {
   output:{
     filename:'[name].[contenthash].js'
   },
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
   plugins: [new HtmlWebpackPlugin({
     // Also generate a test.html
     title: 'My App',
