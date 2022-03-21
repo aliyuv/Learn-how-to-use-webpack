@@ -1,1 +1,3 @@
-export default x = "xxxx";
+import './style/style.css';
+export default x = "xxxxxxxxx";
+
