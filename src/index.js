@@ -1,2 +1,2 @@
-import _ from './x';
-console.log("hi",_);
+import xxx from './x';
+console.log("hi",xxx);
